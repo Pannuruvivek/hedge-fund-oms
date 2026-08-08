@@ -15,8 +15,8 @@ app = FastAPI(
 # Dev-friendly CORS. Lock this down to known origins before production use.
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173"],
-    allow_credentials=True,
+    allow_origins=["*"],
+    allow_credentials=False,
     allow_methods=["*"],
     allow_headers=["*"],
 )
